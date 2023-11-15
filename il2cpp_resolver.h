@@ -450,10 +450,10 @@ namespace il2cpp
 		for (int i = 0; i < assembly_count; i++)
 		{
 			if (std::string(pp_assemblies[i]->m_aName.m_pName) == "Assembly-CSharp")
-				assembly = pp_assemblies[i];
+				p_assembly = pp_assemblies[i];
 		}
 
-		if (!assembly)
+		if (!p_assembly)
 		{
 			ASSERT("failed to find assembly.")
 		}
