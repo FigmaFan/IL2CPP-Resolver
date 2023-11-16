@@ -40,3 +40,12 @@ example:
 System_String_o* p_sys_str = ...;
 std::string str = il2cpp::to_string(p_sys_str);
 ```
+## how to convert std::string to "il2cpp string"
+```C++
+System_String_o* converted_string = il2cpp::create_new_string([string_to_convert]);
+```
+example:
+```C++
+std::string tower_id("DartMonkey");
+System_String_o* p_sys_str = il2cpp::create_new_string(tower_id.c_str());
+```
