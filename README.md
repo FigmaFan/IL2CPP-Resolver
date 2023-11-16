@@ -13,5 +13,30 @@ auto result = il2cpp::call_function<[return type]>(il2cpp::get_method("[namespac
 ```
 example:
 ```C++
-il2cpp::call_function<void>(il2cpp::get_method("Assets.Scripts.Unity.Player", "Btd6Player", "AddItemToInventory"), pBtd6Player, pItemID, 0);
+il2cpp::call_function<void>(il2cpp::get_method("Assets.Scripts.Unity.Player", "Btd6Player", "AddItemToInventory"), p_btd6_player, p_item_id, 0);
+```
+## how to read value of a static field
+```C++
+
+```
+example:
+```C++
+
+```
+## how to write value to a static field
+```C++
+
+```
+example:
+```C++
+
+```
+## how to convert "il2cpp string" to std::string
+```C++
+std::string converted_string = il2cpp::to_string([string_to_convert]);
+```
+example:
+```C++
+System_String_o* p_sys_str = ...;
+std::string str = il2cpp::to_string(p_sys_str);
 ```
