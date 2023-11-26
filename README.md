@@ -15,6 +15,20 @@ example:
 ```C++
 il2cpp::call_function<void>(il2cpp::get_method("Assets.Scripts.Unity.Player", "Btd6Player", "AddItemToInventory"), p_btd6_player, p_item_id, 0);
 ```
+## how to read value of a field
+```C++
+auto result = il2cpp::get_object_field_value<[field_type]>([class_instance], "[namespace]", "[class_name]", "[field_name]");
+```
+example:
+```C++
+int32_t currAmmo = il2cpp::get_object_field_value<int32_t>(pLocalPlayer, "Assets.Scripts.Unity.Player", "LocalPlayer", "ammoInClip");
+```
+## how to write value to a field
+```C++
+```
+example:
+```
+```
 ## how to read value of a static field
 ```C++
 auto result = il2cpp::get_static_field_value<[field_type]>(il2cpp::find_class("[namespace]", "[class_name]"), "[field_name]");
