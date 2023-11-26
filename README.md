@@ -25,9 +25,11 @@ int32_t currAmmo = il2cpp::get_object_field_value<int32_t>(pLocalPlayer, "Assets
 ```
 ## how to write value to a field
 ```C++
+il2cpp::set_object_field_value<[field_type]>([class_instance], "[namespace]", "[class_name]", "[field_name]", [value]);
 ```
 example:
 ```
+il2cpp::set_object_field_value<int32_t>(pLocalPlayer, "Assets.Scripts.Unity.Player", "LocalPlayer", "ammoInClip", 999);
 ```
 ## how to read value of a static field
 ```C++
