@@ -17,19 +17,19 @@ il2cpp::call_function<void>(il2cpp::get_method("Assets.Scripts.Unity.Player", "B
 ```
 ## how to read value of a static field
 ```C++
-
+auto result = il2cpp::get_static_field_value<[field_type]>(il2cpp::find_class("[namespace]", "[class_name]"), "[field_name]");
 ```
 example:
 ```C++
-
+float maxHealth = il2cpp::get_static_field_value<float>(il2cpp::find_class("Assets.Scripts.Unity.Player", "PlayerEntity"), "maxHealth");
 ```
 ## how to write value to a static field
 ```C++
-
+il2cpp::set_static_field_value<[field_type]>(il2cpp::find_class("[namespace]", "[class_name]"), "[field_name]", [value]);
 ```
 example:
 ```C++
-
+il2cpp::set_static_field_value<float>(il2cpp::find_class("Assets.Scripts.Unity.Player", "PlayerEntity"), "maxHealth", 120.0f);
 ```
 ## how to convert "il2cpp string" to std::string
 ```C++
