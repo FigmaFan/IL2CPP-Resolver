@@ -4,6 +4,8 @@ unity il2cpp game hacking library
 # how to use
 include il2cpp_resolver.h in your project
 
+call ```C++ il2cpp::init()``` exactly once before using it!
+
 # doc
 before using il2cpp resolver, call il2cpp::init once!
 
