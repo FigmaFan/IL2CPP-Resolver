@@ -6,7 +6,7 @@
 #define ASSEMBLY_FILE "GameAssembly.dll"
 #define ASSEMBLY_NAME "Assembly-CSharp"
 
-#define ASSERT(x) { MessageBoxA(NULL, x, "il2cpp error", NULL); exit(0); }
+#define ASSERT(x) { MessageBoxA(NULL, x, "il2cpp error", NULL); exit(1); }
 
 namespace il2cpp
 {
