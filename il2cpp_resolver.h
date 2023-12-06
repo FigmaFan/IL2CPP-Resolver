@@ -3,6 +3,9 @@
 #include <Windows.h>
 #include <string>
 
+#define ASSEMBLY_FILE "GameAssembly.dll"
+#define ASSEMBLY_NAME "Assembly-CSharp"
+
 #define ASSERT(x) { MessageBoxA(NULL, x, "il2cpp error", NULL); exit(0); }
 
 namespace il2cpp
@@ -284,7 +287,7 @@ namespace il2cpp
 		};
 	}
 
-	static HMODULE game_assembly = GetModuleHandleA("GameAssembly.dll");
+	static HMODULE game_assembly = GetModuleHandleA(ASSEMBLY_FILE);
 	_internal::il2cppAssembly* p_assembly = nullptr;
 
 	template <class T>
@@ -449,7 +452,7 @@ namespace il2cpp
 		auto pp_assemblies = get_assemblies(get_domain(), &assembly_count);
 		for (int i = 0; i < assembly_count; i++)
 		{
-			if (std::string(pp_assemblies[i]->m_aName.m_pName) == "Assembly-CSharp")
+			if (std::string(pp_assemblies[i]->m_aName.m_pName) == ASSEMBLY_NAME)
 				p_assembly = pp_assemblies[i];
 		}
 
