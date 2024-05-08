@@ -1,5 +1,5 @@
 # IL2CPP-Resolver
-unity il2cpp game hacking library (internal)
+unity il2cpp game hacking library (internal) [C++11+]
 
 # how to use
 include il2cpp_resolver.h in your project
