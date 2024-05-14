@@ -4,7 +4,7 @@ unity il2cpp game hacking library (internal) [C++11+]
 # how to use
 include il2cpp_resolver.h in your project
 
-call ```il2cpp::init()``` exactly once before using it!
+call ```il2cpp::init()``` exactly once before using it! (not really necessary anymore)
 
 # doc
 ## how to call a function
@@ -64,4 +64,28 @@ example:
 ```C++
 std::string tower_id("DartMonkey");
 System_String_o* p_sys_str = il2cpp::create_new_string(tower_id.c_str());
+```
+## how to get System.Array size
+```C++
+soon
+```
+example:
+```C++
+soon
+```
+## how to get System.Array elements
+```C++
+soon
+```
+example:
+```C++
+soon
+```
+## how to convert System.Collections.ArrayList to System.Array
+```C++
+soon
+```
+example:
+```C++
+soon
 ```
