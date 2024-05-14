@@ -439,6 +439,54 @@ namespace il2cpp
 		return _internal::create_new_string(str.c_str());
 	}
 
+	/*
+	* Gets a 32-bit integer that represents the number of elements in the specified dimension of the System.Array
+	* dimension: A zero-based dimension of the System.Array whose length needs to be determined.
+	* returns: A 32-bit integer that represents the number of elements in the specified dimension.
+	*/
+	inline int get_array_size(void* p_system_array_o, int dimension) {
+		if (!p_system_array_o || dimension < 0) { return 0; }
+
+		auto pGetLengthMethodInfo = get_method("System", "Array", "GetLength", "mscorlib");
+		if (pGetLengthMethodInfo) {
+			return il2cpp::call_function<int>(pGetLengthMethodInfo, p_system_array_o, dimension, 0);
+		}
+
+		return 0;
+	}
+
+	/*
+	* Gets the value at the specified position in the one-dimensional System.Array. The index is specified as a 64-bit integer.
+	* index: A 64-bit integer that represents the position of the System.Array element to get.
+	* returns: The value at the specified position in the one-dimensional System.Array.
+	*/
+	template <typename ret>
+	inline ret get_array_element(void* p_array, long long index) {
+		if (!p_array) { return NULL; }
+
+		auto pGetValueMethodInfo = get_method("System", "Array", "GetValue", "mscorlib");
+		if (pGetValueMethodInfo) {
+			return il2cpp::call_function<ret>(pGetValueMethodInfo, p_array, index, 0);
+		}
+
+		return NULL;
+	}
+
+	/*
+	* Copies the elements of the System.Collections.ArrayList to a new System.Object array.
+	* returns: An System.Object array containing copies of the elements of the System.Collections.ArrayList.
+	*/
+	inline void* convert_array_list_to_array(void* p_system_collections_arraylist_o) {
+		if (!p_system_collections_arraylist_o) { return nullptr; }
+
+		auto pToArrayMethodInfo = get_method("System.Collections", "ArrayList", "ToArray", "mscorlib");
+		if (pToArrayMethodInfo) {
+			return il2cpp::call_function<void*>(pToArrayMethodInfo, p_system_collections_arraylist_o, 0);
+		}
+
+		return nullptr;
+	}
+
 	inline bool init() {
 		if (!_internal::p_game_assembly) { ASSERT("failed to get GameAssembly.dll") }
 		if (!_internal::resolve_call) { ASSERT("failed to get resolve_call") }
